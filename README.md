@@ -20,23 +20,39 @@ This site focused on swapping plastic items for:
 
 No build step, no dependencies — it's plain HTML, CSS and JavaScript.
 
+### Run locally
+
+Just open the page:
+
 ```sh
-cp .env.example .env
+open public/index.html
 ```
 
-### Run locally
+The scripts declare globals rather than using ES modules, so it works straight off the
+filesystem — no server required.
+
+For hot reload, use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+VS Code extension — it's already pointed at `public/` in `.vscode/settings.json`.
+
+If you need a real HTTP server (testing from your phone over the LAN, say):
 
 ```sh
 python3 -m http.server -d public 8000
 ```
-
-Then open http://localhost:8000. You can also just open `public/index.html` in a browser.
 
 ### Add a swap
 
 Edit the `swapData` array in `public/swaps.js`.
 
 ### Deploy
+
+Populate `.env` first:
+
+```sh
+cp .env.example .env
+```
+
+Then:
 
 ```sh
 ./deploy
