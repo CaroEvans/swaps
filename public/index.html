@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaps</title>
+    <meta name="description" content="Sustainable swaps for things you use in everyday life.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="app-container">
+      <header>
+        <a href="https://carodev.com/">Go back</a>
+        <h1>Swaps</h1>
+      </header>
+      <div class="banner-container">
+        <div class="lh-banner">
+          <div class="copy-container">
+            <p>
+              <span class="title">Swap: </span>
+              <span class="copy" id="left"></span>
+            </p>
+          </div>
+        </div>
+        <button class="refresh-btn" id="next" type="button" aria-label="Next swap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+        </button>
+        <div class="rh-banner">
+          <div class="copy-container">
+            <p>
+              <span class="title">For: </span>
+              <span class="copy" id="right"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="swaps.js" defer></script>
+    <script src="app.js" defer></script>
+  </body>
+</html>

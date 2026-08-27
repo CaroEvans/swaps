@@ -18,19 +18,26 @@ This site focused on swapping plastic items for:
 
 ## Project Setup
 
+No build step, no dependencies — it's plain HTML, CSS and JavaScript.
+
 ```sh
-cp .env.example .env 
-npm install
+cp .env.example .env
 ```
 
-### Compile and Hot-Reload for Development
+### Run locally
 
 ```sh
-npm run dev
+python3 -m http.server -d public 8000
 ```
 
-### Type-Check, Compile and Minify for Production
+Then open http://localhost:8000. You can also just open `public/index.html` in a browser.
+
+### Add a swap
+
+Edit the `swapData` array in `public/swaps.js`.
+
+### Deploy
 
 ```sh
-npm run build
+./deploy
 ```

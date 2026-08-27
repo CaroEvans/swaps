@@ -14,6 +14,6 @@ fi
 
 echo "🚀 Starting deployment to $REMOTE_HOST..."
 
-rsync -avzh --delete ./dist/* -e "ssh -p $REMOTE_PORT -i $REMOTE_SSH_KEY_PATH" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DEST"
+rsync -avzh --delete ./public/* -e "ssh -p $REMOTE_PORT -i $REMOTE_SSH_KEY_PATH" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DEST"
 
 echo "✅ Deployment complete!"
